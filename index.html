@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="index.css"> 
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>YT切版練習</title>
+    <style>
+        @media (max-width:600px) {
+            .col-sm-2{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav fixed-top">
+        <div style="display: inline-block; padding-top: 10px;">
+                <span class="material-symbols-outlined menu-icon">menu</span>
+                <img src="image/youtube.png" width="10%" onclick="location.href='index.html'" style="vertical-align: top;">
+                <span onclick="location.href='index.html'" class="youtube_logo">YouTube</span>
+        </div>
+        <div style="display: inline-block;">
+            <input title="text" class="search-box" placeholder="搜尋"></span>
+            <span class="material-symbols-outlined voice_search_icon">keyboard_voice</span>
+        </div>
+        <div style="display: inline-block;">
+            <span class="material-symbols-outlined build-icon">video_call</span>
+            <span class="material-symbols-outlined notification-icon">notifications</span>
+            <span>
+                <div class="dot" id="member_info_menu_icon"></div>
+            </span>
+           
+        </div>
+        
+    </div>
+    <div class="container-fluid" style="padding-top: 70px;" >
+        <div class="row">
+            <div class="col-sm-2 fixed ">
+                <div class="top">
+                    <div class="aside_menu_btn">
+                        <span class="material-symbols-outlined">home</span>
+                        <span style="vertical-align: top;">首頁</span> 
+                    </div>
+                    <div class="aside_menu_btn">
+                        <span class="material-symbols-outlined">
+                            smart_display
+                            </span>
+                            <span style="vertical-align: top;">Short</span> 
+                    </div>
+                    <div class="aside_menu_btn">
+                        <span class="material-symbols-outlined">subscriptions</span>
+                        <span style="vertical-align: top;">訂閱內容</span> 
+                    </div>
+                    
+                </div>
+                <div class="middle">
+                    <div class="your-content">
+                        <div class="title" id="title_your-content">
+                            <span style="vertical-align: top;">你的內容</span> 
+                            <span class="material-symbols-outlined">
+                                chevron_right
+                                </span>
+                        </div>
+                        <div class="your-content_items">
+                            <div class="aside_menu_btn">
+                                <span class="material-symbols-outlined">
+                                    account_box
+                                    </span>
+                                    <span style="vertical-align: top;">你的頻道</span> 
+                            </div>
+                            
+                            <div class="aside_menu_btn">
+                                <span class="material-symbols-outlined">
+                                history
+                                </span>
+                                <span style="vertical-align: top;">觀看紀錄</span> 
+                            </div>
+                            <div class="aside_menu_btn">
+                                <span class="material-symbols-outlined">
+                                    slideshow
+                                    </span>
+                                    <span style="vertical-align: top;">你的影片</span> 
+                            </div>
+                            <div class="aside_menu_btn">
+                                <span class="material-symbols-outlined">
+                                    schedule
+                                    </span>
+                                    <span style="vertical-align: top;">稍後觀看</span> 
+                            </div>
+                            <div class="aside_menu_btn">
+                                <span class="material-symbols-outlined">
+                                    thumb_up
+                                    </span>
+                                    <span style="vertical-align: top;">喜歡的影片</span> 
+                            </div>
+                            <div class="aside_menu_btn" onclick="show_more_btn()" id="more_btns">
+                                <span class="material-symbols-outlined">
+                                    expand_more
+                                    </span>
+                                    <span style="vertical-align: top;">顯示更多</span> 
+                            </div>
+                            <div id="show_more_btn">
+                                <div class="aside_menu_btn" >
+                                    <span class="material-symbols-outlined">
+                                    playlist_play
+                                    </span>
+                                    <span style="vertical-align: top;">程式設計</span> 
+                                </div>
+                                <div class="aside_menu_btn" >
+                                    <span class="material-symbols-outlined">
+                                        playlist_play
+                                        </span>
+                                        <span style="vertical-align: top;">無廣告音樂</span> 
+                                    </div>
+                                <div class="aside_menu_btn" id="off_more_btn" onclick="off_more_btn()">
+                                    <span class="material-symbols-outlined">
+                                        expand_less
+                                        </span>
+                                       <span style="vertical-align: top;">顯示較少</span> 
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="subscription">
+                        <div class="title">訂閱內容</div>
+                        <div class="subscription-content">
+                            <div class="dot subscription-dot"></div>ZEROBASEONE
+                        </div>
+                        <div class="subscription-content">
+                            <div class="dot subscription-dot"></div>Hook
+                        </div>
+                        <div class="subscription-content">
+                            <div class="dot subscription-dot"></div>阿心Liao
+                        </div>
+                        <div class="subscription-content">
+                            <div class="dot subscription-dot"></div>Mr.Web Designer
+                        </div>
+                        <div class="subscription-content">
+                            <div class="dot subscription-dot"></div>那對夫妻
+                        </div>
+                        <div class="subscription-content">
+                            <div class="dot subscription-dot"></div>TommyTommy J...
+                        </div>
+                        <div class="subscription-content">
+                            <div class="dot subscription-dot"></div>
+                            日本Kou哥の菜鳥...
+                        </div>
+                        <div class="subscription-content" onclick="show_more_items()" id="more_items">
+                            <span class="material-symbols-outlined">
+                                expand_more
+                                </span>
+                                <span style="vertical-align: top;">
+                                    顯示另外2個項目
+                                </span>
+                        </div>
+                        <div class="off_more_items" id="show_more_items" >
+                            <div class="subscription-content">
+                                <div class="dot subscription-dot"></div>蔡桃貴
+                            </div>
+                            <div class="subscription-content">
+                                <div class="dot subscription-dot"></div>
+                                鈴木的日常
+                            </div>
+                            <div class="subscription-content" id="off_more_items" onclick="off_more_items()">
+                                <span class="material-symbols-outlined">
+                                    expand_less
+                                    </span>
+                                <span style="vertical-align: top;">顯示較少</span>    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="explore">
+                        <div class="title">探索</div>
+                        <div>
+                            <div class="aside_menu_btn">
+                                <span class="material-symbols-outlined">
+                                    local_fire_department
+                                    </span>
+                                    <span style="vertical-align: top;">發燒影片</span> 
+                            </div>
+                           <div class="aside_menu_btn">
+                            <span class="material-symbols-outlined">
+                                music_note
+                                </span>
+                                <span style="vertical-align: top;">音樂</span> 
+                           </div>
+                           <div class="aside_menu_btn">
+                            <span class="material-symbols-outlined">
+                                movie
+                                </span>
+                                <span style="vertical-align: top;">電影</span> 
+                           </div>
+                           <div class="aside_menu_btn">
+                            <span class="material-symbols-outlined">
+                                online_prediction
+                                </span>
+                                <span style="vertical-align: top;">直播</span> 
+                           </div>
+                           <div class="aside_menu_btn">
+                            <span class="material-symbols-outlined">
+                                sports_esports
+                                </span>
+                                <span style="vertical-align: top;">遊戲</span> 
+                           </div>
+                           <div class="aside_menu_btn">
+                            <span class="material-symbols-outlined">
+                                newsmode
+                                </span>
+                                <span style="vertical-align: top;">新聞</span> 
+                           </div>
+                            <div class="aside_menu_btn">
+                                <span class="material-symbols-outlined">
+                                    emoji_events
+                                    </span>
+                                    <span style="vertical-align: top;">體育</span> 
+                            </div>
+                            <div class="aside_menu_btn">
+                                <span class="material-symbols-outlined">
+                                    podcasts
+                                    </span>
+                                    <span style="vertical-align: top;">Podcast</span> 
+                               </div>
+                        </div>
+                    </div>
+                    <div class="more">
+                        <div class="title">更多YouTube功能</div>
+                        <div >
+                            <div class="aside_menu_btn">
+                                <span class="material-symbols-outlined">
+                                    smart_display
+                                    </span>
+                                    <span style="vertical-align: top;">YouTube Premium</span> 
+                                    
+                            </div>
+                            <div class="aside_menu_btn">
+                                <span class="material-symbols-outlined">
+                                    smart_display
+                                    </span>
+                                    <span style="vertical-align: top;">YouTube 工作室</span> 
+                                    
+                            </div>
+                            <div class="aside_menu_btn">
+                                <span class="material-symbols-outlined">
+                                    play_circle
+                                    </span>
+                                    <span style="vertical-align: top;">YouTube Music</span> 
+                                    
+                            </div>
+                            <div class="aside_menu_btn">
+                                <span class="material-symbols-outlined">
+                                    smart_display
+                                    </span>
+                                    <span style="vertical-align: top;">YouTube kids</span> 
+                                    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="other">
+                        <div>
+                            <div class="aside_menu_btn">
+                                <span class="material-symbols-outlined">
+                                    settings
+                                    </span>
+                                    <span style="vertical-align: top;">設定</span> 
+                            </div>
+                            <div class="aside_menu_btn">
+                                <span class="material-symbols-outlined">
+                                    flag
+                                    </span>
+                                    <span style="vertical-align: top;">檢舉</span> 
+                            </div>
+                            <div class="aside_menu_btn">
+                                <span class="material-symbols-outlined">
+                                    help
+                                    </span>
+                                    <span style="vertical-align: top;">說明</span> 
+                            </div>
+                            <div class="aside_menu_btn">
+                                <span class="material-symbols-outlined">
+                                    feedback
+                                    </span>
+                                    <span style="vertical-align: top;">提供意見</span> 
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="end">
+                    簡介媒體版權與我們聯絡創作者廣告開發人員<br>
+                    條款隱私權政策與安全性YouTube 運作方式測試新功能<br>
+                    © 2024 Google LLC
+                </div>
+            </div>
+            <div class="col-sm-10" >
+                <div class="content-menu">
+                    <div class="content-menu_btn" onclick="showDiv('_all');changeBtncolor('_all')" id="btn_all"  >全部</div>
+                    <div class="content-menu_btn" onclick="showDiv('_music');changeBtncolor('_music')" id="btn_music">音樂</div>
+                    <div class="content-menu_btn" onclick="showDiv('_compilation');changeBtncolor('_compilation')"  id="btn_compilation">合輯</div>
+                    <div class="content-menu_btn" onclick="showDiv('_sightseeing');changeBtncolor('_sightseeing')" id="btn_sightseeing" >觀光</div>
+                    <div class="content-menu_btn" onclick="showDiv('_make_up');changeBtncolor('_make_up')" id="btn_make_up">美容訣竅</div>
+                    <div class="content-menu_btn" onclick="showDiv('_cooking');changeBtncolor('_cooking')" id="btn_cooking">烹飪</div>
+                    <div class="content-menu_btn" onclick="showDiv('_the_newest');changeBtncolor('_the_newest')" id="btn_the_newest">最新上傳</div>
+                    <div class="content-menu_btn" onclick="showDiv('_watched');changeBtncolor('_watched')" id="btn_watched">已觀看</div>
+                    <div class="content-menu_btn" onclick="showDiv('_fresh');changeBtncolor('_fresh')" id="btn_fresh"> 讓你耳目一新的影片</div>
+                </div>
+                <div class="content hidden" id="div_all">
+                    <div class="card">
+                        <div class="content-pic"></div>
+                        <div class="description-ad">
+                            〔赫蓮娜週年慶〕百貨全年唯一9折<br>
+                            9折無痛入手 修護傳奇赫蓮娜黑繃帶乳霜 赫蓮娜明星系列買一送三<br>
+                            贊助商廣告 Helena Rubinstein
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="content-pic"></div>
+                        <div class="description-ad">
+                            hi
+                        </div>
+                    </div>
+                </div>
+                <div class="content hidden" id="div_music">
+                    <div class="card">
+                        <div class="content-pic"></div>
+                        <div class="description-ad">
+                            hello
+                        </div>
+                    </div>                 
+                </div>
+                <div class="content hidden" id="div_compilation">
+                    <div class="card">
+                        <div class="content-pic"></div>
+                        <div class="description-ad">
+                            hihihihi
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="content-pic"></div>
+                        <div class="description-ad">
+                           hey
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="content hidden" id="div_sightseeing">
+                    <div class="card">
+                        <div class="content-pic"></div>
+                        <div class="description-ad">
+                            good
+                        </div>
+                    </div>
+                </div>
+                <div class="content hidden" id="div_make_up">
+                    <div class="card">
+                        <div class="content-pic"></div>
+                        <div class="description-ad">
+                            zerobaseone
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="content-pic"></div>
+                        <div class="description-ad">
+                            ze_rose
+                        </div>
+                    </div> 
+                    <div class="card">
+                        <div class="content-pic"></div>
+                        <div class="description-ad">
+                            zerobaseone
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="content-pic"></div>
+                        <div class="description-ad">
+                            ze_rose
+                        </div>
+                    </div> 
+                </div>
+                <div class="content hidden" id="div_cooking">
+                    <div class="card">
+                        <div class="content-pic"></div>
+                        <div class="description-ad">
+                            〔赫蓮娜週年慶〕百貨全年唯一9折<br>
+                            9折無痛入手 修護傳奇赫蓮娜黑繃帶乳霜 赫蓮娜明星系列買一送三<br>
+                            贊助商廣告 Helena Rubinstein
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="content hidden" id="div_the_newest">
+                    <div class="card">
+                        <div class="content-pic"></div>
+                        <div class="description-ad">
+                            joy
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="content-pic"></div>
+                        <div class="description-ad">
+                            jri
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="content hidden " id="div_watched">
+                    <div class="card">
+                        <div class="content-pic"></div>
+                        <div class="description-ad">
+                            1
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="content-pic"></div>
+                        <div class="description-ad">
+                            2
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="content-pic"></div>
+                        <div class="description-ad">
+                            3
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="content-pic"></div>
+                        <div class="description-ad">
+                            4
+                        </div>
+                    </div>
+                </div>
+                <div class="content hidden" id="div_fresh" >
+                    <div class="card">
+                        <div class="content-pic"></div>
+                        <div class="description-ad">
+                           5
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="content-pic"></div>
+                        <div class="description-ad">
+                            6
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
